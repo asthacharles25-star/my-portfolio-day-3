@@ -1,120 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
+    <h1>Astha C</h1>
 
-    <h1>Astha</h1>
-
-    <button id="themeBtn">Theme</button>
-
-    <button id="menuBtn">Menu</button>
+    <button id="menuBtn">☰ Menu</button>
+    <button id="themeBtn">🌙 Dark Mode</button>
 
     <nav id="menu">
-
+        <a href="#hero">Home</a>
         <a href="#about">About</a>
-
         <a href="#skills">Skills</a>
-
         <a href="#projects">Projects</a>
-
+        <a href="#todo">To-Do</a>
         <a href="#contact">Contact</a>
-
     </nav>
-
 </header>
 
 <main>
 
 <section id="hero">
-
-    <h2 id="typing"></h2>
-
-    <p>Welcome to my portfolio website.</p>
-
+    <h2 id="typewriter"></h2>
+    <p>Welcome to my personal portfolio website.</p>
 </section>
 
 <section id="about">
-
-    <h2>About Me 👩‍💻</h2>
-
-    <p>I am a student learning web development.</p>
-
+    <h2>About Me</h2>
+    <p>
+        Hello! I am Astha. I am learning Web Development using
+        HTML, CSS and JavaScript. I enjoy building responsive
+        and interactive websites.
+    </p>
 </section>
+
 <section id="skills">
 
-<h2>Skills</h2>
+    <h2>Skills</h2>
 
-<p>HTML</p>
-<div class="progress">
-<div class="bar" id="htmlBar"></div>
-</div>
+    <p>HTML</p>
+    <div class="progress">
+        <div class="bar" id="htmlBar"></div>
+    </div>
 
-<p>CSS</p>
-<div class="progress">
-<div class="bar" id="cssBar"></div>
-</div>
+    <p>CSS</p>
+    <div class="progress">
+        <div class="bar" id="cssBar"></div>
+    </div>
 
-<p>JavaScript</p>
-<div class="progress">
-<div class="bar" id="jsBar"></div>
-</div>
+    <p>JavaScript</p>
+    <div class="progress">
+        <div class="bar" id="jsBar"></div>
+    </div>
+
+    <p>Tailwind CSS</p>
+    <div class="progress">
+        <div class="bar" id="tailwindBar"></div>
+    </div>
+
+    <p>React</p>
+    <div class="progress">
+        <div class="bar" id="reactBar"></div>
+    </div>
+
+    <p>Node.js</p>
+    <div class="progress">
+        <div class="bar" id="nodeBar"></div>
+    </div>
 
 </section>
+
 <section id="projects">
 
-<h2>Projects</h2>
+    <h2>Projects</h2>
 
-<button class="filter-btn" data-filter="all">All</button>
-<button class="filter-btn" data-filter="frontend">Frontend</button>
-<button class="filter-btn" data-filter="backend">Backend</button>
-<button class="filter-btn" data-filter="ai">AI</button>
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
+    <button class="filter-btn" data-filter="ai">AI</button>
 
-<article class="project frontend">
-<h3>Portfolio Website</h3>
-<p>Responsive frontend website project.</p>
-</article>
+    <article class="project frontend">
+        <h3>Landing Page</h3>
+        <p>Responsive website created using HTML and CSS.</p>
+    </article>
 
-<article class="project backend">
-<h3>Student Management</h3>
-<p>Student management backend application.</p>
-</article>
+    <article class="project backend">
+        <h3>Student Management System</h3>
+        <p>Simple backend project for managing student records.</p>
+    </article>
 
-<article class="project ai">
-<h3>AI Chatbot</h3>
-<p>Simple AI chatbot demonstration project.</p>
-</article>
+    <article class="project ai">
+        <h3>AI Chatbot</h3>
+        <p>Basic chatbot project using JavaScript concepts.</p>
+    </article>
 
 </section>
+
 <section id="todo">
 
-<h2>My To-Do List</h2>
+    <h2>My To-Do List</h2>
 
-<input
-type="text"
-id="taskInput"
-placeholder="Enter Task">
+    <input
+        type="text"
+        id="taskInput"
+        placeholder="Enter a task">
 
-<button id="addTaskBtn">
-Add
-</button>
+    <button id="addTaskBtn">
+        Add Task
+    </button>
 
-<p id="taskCount">
-0 tasks remaining
-</p>
+    <ul id="taskList"></ul>
 
-<ul id="taskList"></ul>
+    <p id="taskCount"></p>
 
 </section>
-
-
 
 <section id="contact">
 
@@ -122,13 +128,24 @@ Add
 
     <form id="contactForm">
 
-        <input type="text" id="name" placeholder="Name">
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name">
 
-        <input type="email" id="email" placeholder="Email">
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email">
 
-        <textarea id="message" placeholder="Message"></textarea>
+        <textarea
+            id="message"
+            placeholder="Your Message">
+        </textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit">
+            Send Message
+        </button>
 
     </form>
 
@@ -136,14 +153,21 @@ Add
 
 </main>
 
+<button id="topBtn">↑</button>
+
 <footer>
 
-    <p id="clock"></p>
+    <p>
+        Current Time:
+        <span id="clock"></span>
+    </p>
+
+    <p>
+        © 2026 Astha C Portfolio
+    </p>
 
 </footer>
-<button id="topBtn">
-↑
-</button>
+
 <script src="script.js"></script>
 
 </body>
