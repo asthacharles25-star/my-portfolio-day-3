@@ -1,8 +1,7 @@
 My Portfolio
 
 Description
-
-A personal portfolio website built using HTML, CSS, and JavaScript.
+ Personal Portfolio Website using HTML, CSS and JavaScript.JavaScript.
 
 What I Learned Today
 
