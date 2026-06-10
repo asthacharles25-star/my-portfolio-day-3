@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <h1>Astha</h1>
+
+    <button id="themeBtn">Theme</button>
+
+    <button id="menuBtn">Menu</button>
+
+    <nav id="menu">
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+<main>
+
+<section id="hero">
+
+    <h2 id="typing"></h2>
+
+    <p>Welcome to my portfolio website.</p>
+
+</section>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p>I am a student learning web development.</p>
+
+</section>
+<section id="skills">
+
+<h2>Skills</h2>
+
+<p>HTML</p>
+<div class="progress">
+<div class="bar" id="htmlBar"></div>
+</div>
+
+<p>CSS</p>
+<div class="progress">
+<div class="bar" id="cssBar"></div>
+</div>
+
+<p>JavaScript</p>
+<div class="progress">
+<div class="bar" id="jsBar"></div>
+</div>
+
+</section>
+<section id="projects">
+
+<h2>Projects</h2>
+
+<button class="filter-btn" data-filter="all">All</button>
+<button class="filter-btn" data-filter="frontend">Frontend</button>
+<button class="filter-btn" data-filter="backend">Backend</button>
+<button class="filter-btn" data-filter="ai">AI</button>
+
+<article class="project frontend">
+<h3>Portfolio Website</h3>
+<p>Frontend Project</p>
+</article>
+
+<article class="project backend">
+<h3>Student Management</h3>
+<p>Backend Project</p>
+</article>
+
+<article class="project ai">
+<h3>AI Chatbot</h3>
+<p>AI Project</p>
+</article>
+
+</section>
+<section id="todo">
+
+<h2>My To-Do List</h2>
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter Task">
+
+<button id="addTaskBtn">
+Add
+</button>
+
+<p id="taskCount">
+0 tasks remaining
+</p>
+
+<ul id="taskList"></ul>
+
+</section>
+
+
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+
+        <input type="text" id="name" placeholder="Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <textarea id="message" placeholder="Message"></textarea>
+
+        <button type="submit">Send</button>
+
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p id="clock"></p>
+
+</footer>
+<button id="topBtn">
+↑
+</button>
+<script src="script.js"></script>
+
+</body>
+</html>
