@@ -1,24 +1,48 @@
-My Portfolio
+# My Portfolio Website
 
-Description
- Personal Portfolio Website using HTML, CSS and JavaScript.JavaScript.
+## Description
 
-What I Learned Today
+A responsive personal portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, projects, contact information, and includes interactive features.
 
-- ES6 Features (let, const, arrow functions)
-- Event Listeners
-- DOM Manipulation
-- localStorage
-- Project Filtering
-- To-Do List Functionality
+## Features
 
-Challenges Faced
+* Responsive Design
+* Mobile Menu Toggle
+* Dark/Light Mode
+* Smooth Scrolling
+* Hero Typewriter Effect
+* Skills Progress Animation
+* Project Filtering
+* To-Do List with localStorage
+* Contact Form Validation
+* Back To Top Button
+* Live Clock
 
-- Understanding localStorage
-- Implementing project filters
-- Testing JavaScript features
+## Technologies Used
 
-How I Solved Them
+* HTML5
+* CSS3
+* JavaScript (ES6)
 
-- Used ChatGPT to understand concepts and debug errors.
-- Tested each feature step by step.
+## What I Learned Today
+
+* ES6 Features (let, const, arrow functions)
+* DOM Manipulation
+* Event Listeners
+* localStorage
+* Project Filtering
+* Form Validation
+* Responsive Web Design
+
+## Challenges Faced
+
+* Understanding localStorage
+* Implementing project filtering
+* Deploying updates on Vercel
+
+## How I Solved Them
+
+* Used ChatGPT for guidance and debugging
+* Tested features step by step
+* Used browser Developer Tools
+
