@@ -1,4 +1,4 @@
-/* Mobile Menu */
+// Mobile Menu Toggle
 
 const menuBtn =
 document.getElementById("menuBtn");
@@ -6,158 +6,155 @@ document.getElementById("menuBtn");
 const menu =
 document.getElementById("menu");
 
-menuBtn.addEventListener("click",()=>{
+menuBtn.addEventListener("click", () => {
+menu.classList.toggle("show");
+});
 
-    menu.classList.toggle("show");
+
+// Smooth Scrolling
+
+document.querySelectorAll("nav a")
+.forEach(link => {
+
+link.addEventListener("click", function(e){
+
+e.preventDefault();
+
+const target =
+document.querySelector(
+this.getAttribute("href")
+);
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+});
 
 });
 
 
-/* Smooth Scrolling */
+// Typewriter Effect
 
-document
-.querySelectorAll('a[href^="#"]')
-.forEach(link=>{
-
-    link.addEventListener(
-        "click",
-        function(e){
-
-            e.preventDefault();
-
-            document
-            .querySelector(
-                this.getAttribute("href")
-            )
-            .scrollIntoView({
-                behavior:"smooth"
-            });
-
-        }
-    );
-
-});
-
-
-/* Typewriter Effect */
-
-const text = "Web Developer";
+const text =
+"Web Developer";
 
 let i = 0;
 
 function typeWriter(){
 
-    if(i < text.length){
+if(i < text.length){
 
-        document
-        .getElementById("typing")
-        .innerHTML += text.charAt(i);
+document.getElementById(
+"typewriter"
+).innerHTML += text.charAt(i);
 
-        i++;
+i++;
 
-        setTimeout(typeWriter,150);
-    }
+setTimeout(
+typeWriter,
+150
+);
+
+}
+
 }
 
 typeWriter();
 
 
-/* Live Clock */
+// Live Clock
 
 function updateClock(){
 
-    const now = new Date();
+const now =
+new Date();
 
-    document
-    .getElementById("clock")
-    .textContent =
-    now.toLocaleTimeString();
+const time =
+now.toLocaleTimeString();
+
+document.getElementById(
+"clock"
+).textContent = time;
 
 }
 
-setInterval(updateClock,1000);
+setInterval(
+updateClock,
+1000
+);
 
 updateClock();
 
 
-/* Form Validation */
-
-const form =
-document.getElementById(
-    "contactForm"
-);
-
-form.addEventListener(
-    "submit",
-    function(e){
-
-        e.preventDefault();
-
-        const name =
-        document.getElementById(
-            "name"
-        ).value;
-
-        const email =
-        document.getElementById(
-            "email"
-        ).value;
-
-        const message =
-        document.getElementById(
-            "message"
-        ).value;
-
-        if(
-            name === "" ||
-            email === "" ||
-            message === ""
-        ){
-
-            alert(
-                "Please fill all fields"
-            );
-
-        }
-
-        else{
-            console.log({
-                name:name,
-                email:email,
-                message:message
-            });
-
-            alert(
-                "Form submitted successfully"
-            );
-
-            form.reset();
-
-        }
-
-    }
-);
-
-
-/* Dark Mode */
+// Dark Mode
 
 const themeBtn =
 document.getElementById(
-    "themeBtn"
+"themeBtn"
 );
 
 themeBtn.addEventListener(
-    "click",
-    ()=>{
+"click",
+() => {
 
-        document
-        .documentElement
-        .classList
-        .toggle("dark");
+document.documentElement
+.classList.toggle("dark");
 
-    }
+}
 );
-/* Project Filter */
+
+
+// Skills Animation
+
+window.addEventListener(
+"scroll",
+() => {
+
+const skills =
+document.getElementById(
+"skills"
+);
+
+const position =
+skills.getBoundingClientRect().top;
+
+const screen =
+window.innerHeight;
+
+if(position < screen){
+
+document.getElementById(
+"htmlBar"
+).style.width="90%";
+
+document.getElementById(
+"cssBar"
+).style.width="85%";
+
+document.getElementById(
+"jsBar"
+).style.width="80%";
+
+document.getElementById(
+"tailwindBar"
+).style.width="75%";
+
+document.getElementById(
+"reactBar"
+).style.width="70%";
+
+document.getElementById(
+"nodeBar"
+).style.width="65%";
+
+}
+
+}
+);
+
+
+// Project Filter
 
 const filterButtons =
 document.querySelectorAll(
@@ -169,75 +166,41 @@ document.querySelectorAll(
 ".project"
 );
 
-filterButtons.forEach(btn=>{
+filterButtons.forEach(button => {
 
-btn.addEventListener(
+button.addEventListener(
 "click",
-()=>{
+() => {
 
 const filter =
-btn.dataset.filter;
+button.dataset.filter;
 
-projects.forEach(project=>{
+projects.forEach(project => {
 
 if(
-filter==="all" ||
+filter === "all" ||
 project.classList.contains(filter)
 ){
-project.style.display="block";
+
+project.style.display =
+"block";
+
 }
 else{
-project.style.display="none";
-}
 
-});
-
-});
-
-});
-
-
-/* Skill Animation */
-
-window.addEventListener(
-"scroll",
-()=>{
-
-const skills =
-document.getElementById(
-"skills"
-);
-
-const position =
-skills.getBoundingClientRect()
-.top;
-
-if(position < 400){
-
-document
-.getElementById(
-"htmlBar"
-)
-.style.width="90%";
-
-document
-.getElementById(
-"cssBar"
-)
-.style.width="85%";
-
-document
-.getElementById(
-"jsBar"
-)
-.style.width="75%";
+project.style.display =
+"none";
 
 }
 
 });
 
+});
 
-/* Back To Top */
+});
+
+
+// Back To Top Button
 
 const topBtn =
 document.getElementById(
@@ -246,37 +209,98 @@ document.getElementById(
 
 window.addEventListener(
 "scroll",
-()=>{
+() => {
 
 if(
-window.scrollY > 200
+window.scrollY > 300
 ){
-topBtn.style.display=
+
+topBtn.style.display =
 "block";
+
 }
 else{
-topBtn.style.display=
+
+topBtn.style.display =
 "none";
+
 }
 
-});
+}
+);
 
 topBtn.addEventListener(
 "click",
-()=>{
+() => {
 
 window.scrollTo({
 top:0,
 behavior:"smooth"
 });
 
-});
+}
+);
 
 
+// Contact Form Validation
+
+document.getElementById(
+"contactForm"
+)
+.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const name =
+document.getElementById(
+"name"
+).value.trim();
+
+const email =
+document.getElementById(
+"email"
+).value.trim();
+
+const message =
+document.getElementById(
+"message"
+).value.trim();
+
+if(
+name === "" ||
+email === "" ||
+message === ""
+){
+
+alert(
+"Please fill all fields"
+);
+
+return;
+
+}
+
+const formData = {
+name,
+email,
+message
+};
+
+console.log(formData);
+
+alert(
+"Form submitted successfully"
+);
+
+this.reset();
+
+}
+);
 
 
-
-/* Todo List */
+// To-Do List
 
 const taskInput =
 document.getElementById(
@@ -298,79 +322,96 @@ document.getElementById(
 "taskCount"
 );
 
-let tasks = JSON.parse(
-localStorage.getItem(
-"tasks"
-)
+let tasks =
+JSON.parse(
+localStorage.getItem("tasks")
 ) || [];
 
-const saveTasks = ()=>{
+function saveTasks(){
 
 localStorage.setItem(
 "tasks",
 JSON.stringify(tasks)
 );
 
-};
+}
 
-const renderTasks = ()=>{
+function updateCount(){
 
-taskList.innerHTML="";
+const remaining =
+tasks.filter(
+task => !task.completed
+).length;
+
+taskCount.textContent =
+`${remaining} tasks remaining`;
+
+}
+
+function renderTasks(){
+
+taskList.innerHTML = "";
 
 tasks.forEach(
-(task,index)=>{
+(task,index) => {
 
 const li =
 document.createElement(
 "li"
 );
 
-li.innerHTML=
-`
-<input
-type="checkbox"
-${task.completed ?
-"checked" : ""}>
-
-<span class="${
-task.completed ?
-"completed" : ""
-}">
-${task.text}
-</span>
-
-<button>
-Delete
-</button>
-`;
-
 const checkbox =
-li.querySelector(
+document.createElement(
 "input"
 );
 
+checkbox.type =
+"checkbox";
+
+checkbox.checked =
+task.completed;
+
+const span =
+document.createElement(
+"span"
+);
+
+span.textContent =
+task.text;
+
+if(task.completed){
+
+span.classList.add(
+"completed"
+);
+
+}
+
 checkbox.addEventListener(
 "change",
-()=>{
+() => {
 
-tasks[index]
-.completed =
-checkbox.checked;
+tasks[index].completed =
+!tasks[index].completed;
 
 saveTasks();
 
 renderTasks();
 
-});
+}
+);
 
 const deleteBtn =
-li.querySelector(
+document.createElement(
 "button"
 );
 
+deleteBtn.textContent =
+"Delete";
+
 deleteBtn.addEventListener(
 "click",
-()=>{
+() => {
 
 tasks.splice(
 index,
@@ -381,51 +422,69 @@ saveTasks();
 
 renderTasks();
 
-});
+}
+);
 
-taskList.appendChild(li);
+li.appendChild(
+checkbox
+);
 
-});
+li.appendChild(
+span
+);
 
-const remaining =
-tasks.filter(
-task=>
-!task.completed
-).length;
+li.appendChild(
+deleteBtn
+);
 
-taskCount.textContent=
-`${remaining}
-tasks remaining`;
+taskList.appendChild(
+li
+);
 
-};
+}
+);
 
-addTaskBtn
-.addEventListener(
-"click",
-()=>{
+updateCount();
 
-if(
-taskInput.value.trim()
-!== ""
-){
+}
+
+function addTask(){
+
+const text =
+taskInput.value.trim();
+
+if(text === "")
+return;
 
 tasks.push({
-
-text:
-taskInput.value,
-
+text:text,
 completed:false
-
 });
-
-taskInput.value="";
 
 saveTasks();
 
 renderTasks();
 
+taskInput.value="";
+
 }
 
-});
+addTaskBtn.addEventListener(
+"click",
+addTask
+);
+
+taskInput.addEventListener(
+"keypress",
+function(e){
+
+if(e.key==="Enter"){
+
+addTask();
+
+}
+
+}
+);
 
 renderTasks();
